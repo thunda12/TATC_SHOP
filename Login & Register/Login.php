@@ -2,9 +2,7 @@
     session_start();
     $errors = array();
     include '../connect.php';
-
     if(isset($_REQUEST['Login'])){
-     
         $username = $_POST['CusUser'];
         $password = $_POST['Pass'];
         if(empty($username) or empty($password)){
