@@ -92,10 +92,10 @@
         include 'component/carousel.php';
         ?>
       <div class="row mx-5"  >
-        <div class="col-sm-2" style="background-color: wheat ;">
+        <div class="col-sm-2" >
         <?php include 'categories.php'; ?>
         </div>
-        <div class="col-sm-10" style="background-color: gray ;">
+        <div class="col-sm-10" >
       <?php $q = isset($_GET['search'])?$_GET['search'] : ""; 
       if($q != ""){
         include 'searchBE.php';

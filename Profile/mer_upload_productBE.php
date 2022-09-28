@@ -2,11 +2,13 @@
 require '../connect.php';
 session_start();
 $errors = array();
+$date=date("H:i:s");
 //ทำตัวแปรสำหรับเปลี่ยนเส้นทางของรูปภาพ
 $dir = "../pro_img/";
-$FilePart = $dir . $_SESSION['mer_id'] . basename($_FILES["img-name"]["name"]);
 //variable for image name
-$img_name = $_SESSION['mer_id'] . $_FILES["img-name"]["name"];
+$img_name = $_SESSION['mer_id'] . $_FILES["img-name"]["name"] . $date;
+$FilePart = $dir .$_SESSION['mer_id']. $_FILES["img-name"]["name"];
+
     //insert product to DB
     if(isset($_REQUEST['submit'])){
         $pro_name = $_POST["pro_name"];
@@ -39,9 +41,10 @@ $img_name = $_SESSION['mer_id'] . $_FILES["img-name"]["name"];
                 //เช็คว่าเป็นรูปภาพหรือไม่
                 if($_FILES["img-name"]["type"] == "image/jpeg" || "image/png"){
                     if(move_uploaded_file($_FILES["img-name"]["tmp_name"],$FilePart)){
+                        // echo $pro_name." "."<br>".$pro_des." ".$pro_type." ".$pro_price." ".$pro_amt." ".$img." ".$pro_tag." ".$mer_id;
                         // echo "Upload ". $_FILES["img-name"]["name"] . " Success";
-                    $sql = "INSERT INTO product(proName,proDes,proType_Id,proPrice,proAmt,img_name,proTag,mer_Id) 
-                    VALUE ('$pro_name','$pro_des','$pro_type','$pro_price','$pro_amt','$img','$pro_tag','$mer_id')";
+                    $sql = "INSERT INTO product(`proName`,`proDes`,`proType_Id`,`proPrice`,`proAmt`,`img_name`,`proTag`,`mer_Id`) 
+                    VALUES ('$pro_name','$pro_des','$pro_type','$pro_price','$pro_amt','$img','$pro_tag','$mer_id')";
                     $result = mysqli_query($conn,$sql); 
 
                         echo "<script> window.location.href='index.php?select=upload'; 

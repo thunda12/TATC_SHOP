@@ -75,7 +75,7 @@
             <div class="col-md-2 " ><button class="btn_line"><a href="index.php?select=product_detail" >Description</a></button></div>
             <div class="col-md-2 " ><button class="btn_line"><a href="index.php?select=product_review" >Review</a></button></div>
             <div class="col-md-2 offset-md-4 "></div>
-            <?php if(!$_SESSION['mer_id']){?>
+            <?php if(!isset($_SESSION['mer_id'])){?>
             <div class="col-md-2 "><a href="update_cartBE.php?pro_id=<?php echo $row['pro_Id'] ?>" class="btn btn-primary" style="padding: 20px 20px ;">Add To Cart</a></div>
             <?php }?>
         </div>

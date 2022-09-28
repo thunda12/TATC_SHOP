@@ -25,7 +25,8 @@
         $inputPro_id=rtrim($pro_ids,",");
         // echo "<li>".$inputPro_id."</li>";
         // var_dump($inputPro_id);
-        $sql="SELECT * FROM product WHERE pro_Id in ($inputPro_id) AND pro_Id != 0";//in ($inputPro_id)
+        $sql="SELECT * FROM product AS p INNER JOIN merchant AS m ON p.mer_Id = m.mer_Id 
+        WHERE pro_Id in ($inputPro_id) AND pro_Id != 0";//in ($inputPro_id)
         $result=mysqli_query($conn,$sql);
         $num_rows=mysqli_num_rows($result);
     }else{
@@ -34,6 +35,7 @@
     if($num_rows==0){
         echo "<script>
         alert('ไม่มีสินค้าในตะกร้า')
+        window.location.href='index.php';
             </script>";
     }else{
 ?>
@@ -42,9 +44,10 @@
     <form action="update_cartBE.php" method="Post">
         <div class="container mt-5">
             <h1 class="" style="text-align:center;">ตะกร้าสินค้า</h1>
-    <table class="table table-strip">
+        
+    <table class="table table-strip">  
         <tr>
-            <th>รหัสสินค้า</th>
+            <th>รูป</th>
             <th>ชื่อสินค้า</th>
             <th>จำนวน</th>
             <th>ราคาต่อหน่วย</th>
@@ -54,13 +57,13 @@
         <?php
             $i=0;
             $total_price=0;
-            while($row=mysqli_fetch_array($result)){
+                while($row=mysqli_fetch_array($result)){
                 $key=array_search($row['pro_Id'],$_SESSION['cart']);
                 $total_price=$total_price+($row['proPrice'] * $_SESSION['qty'][$key]);
             
         ?>
         <tr>
-            <td><?php echo $row['pro_Id'] ?></td>
+            <td><img src="pro_img/<?php echo $row['img_name'] ?>" alt="" width="50px" height="50px"></td>
             <td><?php echo $row['proName'] ?></td>
             <td>
                 <input type="text" class="form-control" value=<?php echo $_SESSION['qty'][$key]?>
@@ -77,6 +80,7 @@
             $i++;
         }
         ?>
+        </div>
         <tr>
             <td colspan="6">
                 <h4>จำนวนเงินทั้งหมด <?php echo $total_price ?> บาท</h4>

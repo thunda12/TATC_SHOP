@@ -1,9 +1,10 @@
 <?php
 require '../connect.php';
 $order_id = isset($_SESSION['order_id']) ? $_SESSION['order_id'] : 0;
+$mer_id = $_SESSION['mer_id'];
 if (isset($_SESSION['order_id'])) {
     $sql = "SELECT * FROM sale_detail AS sd INNER JOIN product AS p 
-        ON sd.pro_Id = p.pro_Id  WHERE sale_Id = $order_id";
+        ON sd.pro_Id = p.pro_Id  WHERE sd.sale_Id = $order_id AND p.mer_id = $mer_id";
     $result = $conn->query($sql);
     // echo "<pre>";
     // var_dump($order_id);
@@ -48,10 +49,13 @@ if (isset($_SESSION['order_id'])) {
                 <?php } ?>
             </tbody>
         </table>
-        <div class="call_back">
+        <div class="call_back  d-inline">
             <a href="index.php?select=mer_order">
         <button class="btn btn-primary">ย้อนกลับ</button>
             </a>
-        </div>
+            <a href="confirm.php?confirm=ok">
+        <button class="btn btn-success">ยืนยัน</button>
+            </a>
+        </div> 
     </div>
 <?php } ?>

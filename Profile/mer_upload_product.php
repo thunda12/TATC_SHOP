@@ -124,6 +124,8 @@
     <input type="file" class="form-control" name="img-name" id="up-input">
   </div>
   <input type="text" name="mer_id" value="<?php echo $mer ?>" hidden>
+  <input type="text" name="edit_id" value="<?php echo $rw['pro_Id'] ?>" hidden>
+  <input type="text" name="old_img" value="<?php echo $rw['img_name'] ?>" hidden>
   <input type="submit" class="btn btn-primary" name="Edit" value="Edit">
 </form>
 </div>
