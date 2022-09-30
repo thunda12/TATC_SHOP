@@ -92,6 +92,9 @@
           case "mer_order_detail":
             include 'mer_order_detail.php';
             break;
+          case "cus_order_detail":
+            include 'cus_order_detail.php';
+            break;
             default:
             if(isset($_SESSION['mer_name'])){
               include 'mer_product.php';
@@ -130,6 +133,7 @@
 </script>
     <!-- Template Javascript -->
     <script src="../js/main.js"></script>
+    <script src="../java_src/"></script>
 </body>
 
 </html>

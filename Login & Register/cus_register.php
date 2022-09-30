@@ -105,7 +105,7 @@
                 <label class="form-label" for="typeEmailX" >Email</label>
               </div>
               <div class="form-outline form-white mb-4">
-                <input type="text" name="cusIdCard" class="form-control form-control-lg" require/>
+                <input type="text" name="cusIdCard" class="form-control form-control-lg" placeholder="กรุณาใส่ตามบัตรจริง" require/>
                 <label class="form-label" for="typePasswordX">รหัสบัตรประชาชน</label>
               </div>              
               <div class="form-outline form-white mb-4">
@@ -143,7 +143,7 @@
                   </div>
             </div>
             <div>
-              <p class="mb-0">สมัครเป็นพ่อค้า
+              <p class="mb-0">เข้าสู่ระบบเป็นพ่อค้า
                 <a href="login_mer.php" class="text-white-50 fw-bold">click</a>
               </p>
             </div>

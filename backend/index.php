@@ -14,37 +14,31 @@
 
   <?php
     switch(@$_GET['page']){
-      case "member" :
-        include "member.php";
+      case "customer" :
+        include "customer.php";
         break;
-      case "add_member":
-        include "add_member.php";
+      case "edit_customer":
+        include "edit_customer.php";
         break;
-      case "edit_member":
-        include "edit_member.php";
+      case "del_customer":
+        include "del_customer.php";
         break;
-      case "del_member":
-        include "del_member.php";
+      case "merchant":
+        include "merchant.php";
         break;
-      case "product":
-        include "product.php";
+      case "edit_merchant":
+        include "edit_merchant.php";
         break;
-      case "add_product":
-        include "add_product.php";
+      case "del_merchant":
+        include "del_merchant.php";
         break;
-        case "edit_product":
-          include "edit_product.php";
-          break;
-      case "del_product":
-        include "del_product.php";
+      case "saledetail":
+        include "saledetail.php";
         break;
-      case "add_many":
-        include "add_many.php";
+      case "howmanypeoplesawmyweb":
+        include "howmanypeoplesawmyweb.php";
         break;
-      case "add_pro_many":
-        include "add_pro_many.php";
-        break;
-      default:  include "member.php";
+      //default:  include "member.php";
 }
   ?>
 </div>

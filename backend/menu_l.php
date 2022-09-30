@@ -23,56 +23,35 @@
         <!-- nav-compact -->
         <ul class="nav nav-pills nav-sidebar nav-child-indent flex-column" data-widget="treeview" role="menu" data-accordion="false">  
           <li class="nav-item" >
-            <a href="index.php?page=member" class="nav-link">
+            <a href="index.php?page=merchant" class="nav-link">
               <i class="nav-icon fas fa-address-card"></i>
-              <p>Member</p>
+              <p>Merchant</p>
             </a>
           </li>
  
            <li class="nav-item">
-            <a href="index.php?page=product" class="nav-link <?php if($menu=="food"){echo "active";} ?> ">
+            <a href="index.php?page=customer" class="nav-link">
               <i class="nav-icon fas fa-hamburger"></i>
-              <p>product</p>
+              <p>Customer</p>
             </a>
           </li>
 
             <li class="nav-item">
-            <a href="doc.php" class="nav-link <?php if($menu=="doc"){echo "active";} ?> ">
+            <a href="index.php?page=saledetail" class="nav-link">
               <i class="nav-icon fas fa-file-pdf"></i>
-              <p>Doc</p>
+              <p>Sale Details</p>
             </a>
           </li>
-
-
+          
           <li class="nav-item">
-            <a href="from.php" class="nav-link <?php if($menu=="from"){echo "active";} ?> ">
-              <i class="nav-icon fas fa-apple-alt"></i>
-              <p>Form</p>
+            <a href="index.php?page=howmanypeoplesawmyweb" class="nav-link">
+              <i class="nav-icon fas fa-file-pdf"></i>
+              <p>Website visitors</p>
             </a>
           </li>
 
-      
 
-          <li class="nav-item">
-            <a href="table.php" class="nav-link <?php if ($menu == "table"){echo "active";} ?>">
-              <i class="nav-icon fas fa-list-alt"></i>
-              <p>Tebles</p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="button.php" class="nav-link <?php if ($menu == "button"){echo "active";} ?>">
-              <i class="nav-icon fas fa-check-square"></i>
-              <p>Buttons</p>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="icon.php" class="nav-link <?php if ($menu == "icon"){echo "active";} ?>">
-              <i class="nav-icon fas fa-icons"></i>
-              <p>Icon</p>
-            </a>
-          </li>
+          
       <div class="user-panel mt-2 pb-3 mb-2 d-flex">
   
       </div>

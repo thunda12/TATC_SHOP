@@ -67,8 +67,8 @@
           <div class="card-body p-5 text-center">
 
             <div class="mb-md-5 mt-md-4 pb-5">
-              <h2 class="fw-bold mb-2 text-uppercase text-white">Customer Login</h2>
-              <p class="text-white-50 mb-5">Please enter your login and password!</p>
+              <h2 class="fw-bold mb-2 text-uppercase text-white">เข้าสู่ระบบ ลูกค้า</h2>
+              <p class="text-white-50 mb-5">โปรดใส่ email และ password!</p>
 
             <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
               <div class="form-outline form-white mb-4">
@@ -102,13 +102,13 @@
                     </p>
                   </div>
                   <div class="col-sm-6">
-                    <p class="mb-0">Forgot Password? <br>
+                    <p class="mb-0">ลืมรหัสผ่าน? <br>
                       <a href="forgot_password.php" class="text-white-50 fw-bold">Reset</a>
                     </p>
                   </div>
             </div>
             <div>
-              <p class="mb-0">Login For Merchant 
+              <p class="mb-0">เข้าสู่ระบบเป็นพ่อค้า 
                 <a href="login_mer.php" class="text-white-50 fw-bold">click</a>
               </p>
             </div>

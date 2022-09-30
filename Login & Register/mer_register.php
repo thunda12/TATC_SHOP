@@ -102,7 +102,7 @@
                 <label class="form-label" for="typeEmailX" >Email</label>
               </div>
               <div class="form-outline form-white mb-4">
-                <input type="text" name="cusIdCard" class="form-control form-control-lg" require/>
+                <input type="text" name="cusIdCard" class="form-control form-control-lg" placeholder="กรุณาใส่ตามบัตรจริง" require/>
                 <label class="form-label" for="typePasswordX">รหัสบัตรประชาชน</label>
               </div>              
               <div class="form-outline form-white mb-4">

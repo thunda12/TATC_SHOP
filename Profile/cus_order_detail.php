@@ -33,6 +33,7 @@ if (isset($_SESSION['order_id'])) {
                     <th scope="col">ชื่อสินค้า</th>
                     <th scope="col">จำนวน</th>
                     <th scope="col">ราคา(ต่อหน่วย)</th>
+                    <th scope="col">สถานะสินค้า</th>
                 </tr>
             </thead>
             <tbody>
@@ -45,13 +46,18 @@ if (isset($_SESSION['order_id'])) {
                         </th>
                         <td><h5><?php echo $row['proName'] ?></h5></td>
                         <td><h5><?php echo $row['amount'] ?> ชิ้น</h5></td>
-                        <td><h5><?php echo $row['proPrice'] ?></h5></td>  
+                        <td><h5><?php echo $row['proPrice'] ?></h5></td>
+                        <?php if($row['saleStatus_Id'] == "1"){ ?>  
+                        <td>❌ รอผู้ขายยืนยัน</td> 
+                        <?php }else{?>
+                        <td>✔️ ยืนยันแล้ว</td>
+                        <?php }?>  
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
         <div class="call_back  d-inline">
-            <a href="index.php?select=mer_order">
+            <a href="index.php?select=cus_order">
         <button class="btn btn-primary">ย้อนกลับ</button>
             </a>
         </div> 

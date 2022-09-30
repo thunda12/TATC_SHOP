@@ -32,10 +32,12 @@ if (isset($_SESSION['order_id'])) {
                     <th scope="col">ชื่อสินค้า</th>
                     <th scope="col">จำนวน</th>
                     <th scope="col">ราคา(ต่อหน่วย)</th>
+                    <th scope="col">ยืนยัน</th>
                 </tr>
             </thead>
             <tbody>
-                <?php while ($row = $result->fetch_array()) { ?>
+                <?php $i=1;
+                while ($row = $result->fetch_array()) { ?>
                     <tr>
                         <th scope="row">
                             <a href="../pro_detailBE.php?proDetail_id=<?php echo $row['pro_Id']?>">
@@ -44,18 +46,26 @@ if (isset($_SESSION['order_id'])) {
                         </th>
                         <td><h5><?php echo $row['proName'] ?></h5></td>
                         <td><h5><?php echo $row['amount'] ?> ชิ้น</h5></td>
-                        <td><h5><?php echo $row['proPrice'] ?></h5></td>  
+                        <?php $price = intval($row['proPrice']);
+                              $amt = intval($row['amount']);
+                              $total_price = $price * $amt; ?>
+                        <td><h5><?php echo $total_price ?></h5></td>
+                        <?php if($row['saleStatus_Id'] == "1"){ ?>  
+                        <td><a href="confirm.php?pro_id=<?php echo $row['pro_Id']?>&order_id=<?php echo $order_id?>">✅</a></td> 
+                        <?php }else{?>
+                        <td>ยืนยันแล้ว</td>
+                        <?php }?>
                     </tr>
-                <?php } ?>
+                <?php $i++;} ?>
             </tbody>
         </table>
         <div class="call_back  d-inline">
             <a href="index.php?select=mer_order">
         <button class="btn btn-primary">ย้อนกลับ</button>
             </a>
-            <a href="confirm.php?confirm=ok">
-        <button class="btn btn-success">ยืนยัน</button>
-            </a>
         </div> 
     </div>
+    
+    
 <?php } ?>
+                    

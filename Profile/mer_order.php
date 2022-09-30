@@ -3,8 +3,7 @@
     $mer_id = $_SESSION['mer_id'];
         $sql = "SELECT * FROM sale AS s INNER JOIN customer AS c 
         ON s.cus_Id = c.cus_Id INNER JOIN sale_detail AS sd ON s.sale_Id = sd.sale_Id 
-        INNER JOIN product AS p ON sd.pro_Id = p.pro_Id INNER JOIN sale_status AS ss 
-        ON s.saleStatus_Id = ss.saleStatus_Id WHERE p.mer_Id = $mer_id
+        INNER JOIN product AS p ON sd.pro_Id = p.pro_Id WHERE p.mer_Id = $mer_id
         GROUP BY s.sale_Id
         ORDER BY s.sale_Id ASC" ;
     $result = $conn->query($sql);

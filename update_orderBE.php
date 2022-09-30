@@ -4,16 +4,23 @@
         include 'connect.php';
         $id=$_SESSION['cus_id'];
         //$date=date("l jS \of F Y H:i:s");
-        $total = $_SESSION['total'];
-        $sql="INSERT INTO sale VALUES('','$id','','$total')";
-        $result=mysqli_query($conn,$sql);
+        //ทำตัวแปรสำหรับเปลี่ยนเส้นทางของรูปภาพ
+            $dir = "bill/";
+            //variable for image name
+            $img_name = $_SESSION['cus_id'].$_FILES["img-name"]["name"] ;
+            $FilePart = $dir .$_SESSION['cus_id'].$_FILES["img-name"]["name"] ;
+            $total = $_SESSION['total'];
+            if(move_uploaded_file($_FILES["img-name"]["tmp_name"],$FilePart)){
+            $sql="INSERT INTO sale VALUES('','$id','','$total','$img_name')";
+            $result=mysqli_query($conn,$sql);
+            }   
         if($result){
             $order_id=$conn->insert_id;
             for($i=0; $i < count($_POST['qty']); $i++){
                 $qty=$_POST['qty'][$i];
                 $price =$_POST['price'][$i];
                 $pro_id=$_POST['pro_id'][$i];   
-                $sql2="INSERT INTO sale_detail VALUEs('','$order_id','$pro_id','$qty','$price')";
+                $sql2="INSERT INTO sale_detail VALUEs('','$order_id','$pro_id','$qty','$price','')";
                 $conn->query($sql2);
                 $sql_pro = "SELECT * FROM product WHERE pro_Id = $pro_id";
                 $result_pro = $conn->query($sql_pro);
