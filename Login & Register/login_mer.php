@@ -30,9 +30,8 @@
             // var_dump($username) ; 
             // var_dump($password) ;
             // echo'</pre>';
-            
             if($check = mysqli_num_rows($result) != 0){
-            $_SESSION['mer_name'] = $row["username"];
+            $_SESSION['mer_name'] = $row["Email"];
             $_SESSION['mer_id'] = $row["mer_Id"];   
             header("location: ../index.php");
             }else{
@@ -68,7 +67,8 @@
         .gradient-custom {
             background: rgb(131,214,255);
             background: linear-gradient(121deg, rgba(131,214,255,1) 35%, rgba(0,73,167,0.9413515406162465) 100%);
-    }
+    
+          }
     </style>
 <section class="vh-100 gradient-custom" id="Login" >
   <div class="container py-5 h-100">
@@ -109,12 +109,12 @@
             <div class="row">
                   <div class="col-sm-6">
                     <p class="mb-0">Don't have an account? 
-                      <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
+                      <a href="mer_register.php" class="text-white-50 fw-bold">Sign Up</a>
                     </p>
                   </div>
                   <div class="col-sm-6">
                     <p class="mb-0">Forgot Password? <br>
-                      <a href="forgot_password.php" class="text-white-50 fw-bold">Reset</a>
+                      <a href="mer_forgot_password.php" class="text-white-50 fw-bold">Reset</a>
                     </p>
                   </div>
             </div>

@@ -9,8 +9,8 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-7 pt-5">
-                                    <h1 class="display-4 text-white mb-3 animated slideInDown">Let's Change The World With Humanity</h1>
-                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">Aliqu diam amet diam et eos. Clita erat ipsum et lorem sed stet lorem sit clita duo justo erat amet</p>
+                                    <h1 class="display-4 text-white mb-3 animated slideInDown">อยากรู้มั้ยวาเว็ปเราทำงานอย่างไร</h1>
+                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">กดที่ปุ่มเพื่อไปดูกันเลย!!</p>
                                     <a class="btn btn-primary py-2 px-3 animated slideInDown" href="">
                                         Learn More
                                         <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
@@ -28,8 +28,8 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-7 pt-5">
-                                    <h1 class="display-4 text-white mb-3 animated slideInDown">Let's Save More Lifes With Our Helping Hand</h1>
-                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">Aliqu diam amet diam et eos. Clita erat ipsum et lorem sed stet lorem sit clita duo justo erat amet</p>
+                                    <h1 class="display-4 text-white mb-3 animated slideInDown">ระบบในอนาคตเป็นยังไงบ้าง?</h1>
+                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">นี่คือสิ่งที่จะเกิดขึ้นในอนาคต</p>
                                     <a class="btn btn-primary py-2 px-3 animated slideInDown" href="">
                                         Learn More
                                         <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
@@ -47,8 +47,8 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-7 pt-5">
-                                    <h1 class="display-4 text-white mb-3 animated slideInDown">Let's Save More Lifes With Our Helping Hand</h1>
-                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">Aliqu diam amet diam et eos. Clita erat ipsum et lorem sed stet lorem sit clita duo justo erat amet</p>
+                                    <h1 class="display-4 text-white mb-3 animated slideInDown">ขอบคุณทุกคนที่เข้ามาใช้งาน</h1>
+                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">เราสัญญาว่าจะพัฒนาให้เว็ปใช้งานง่ายมากยิ่งขึ้น</p>
                                     <a class="btn btn-primary py-2 px-3 animated slideInDown" href="">
                                         Learn More
                                         <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">

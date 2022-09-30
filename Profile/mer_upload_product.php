@@ -12,7 +12,6 @@
 <style>
     img{
       margin: 1% 5% 1% 10%;
-      background-color: red;
       border-radius: 20px;
       
     }
@@ -101,6 +100,7 @@
   <div class="mb-3">
     <label for="pro_type" class="form-label">Product Type</label>
     <select name="pro_type" class="form-control">
+    <option value="0">default category</option>
     <?php while($row = mysqli_fetch_assoc($result)){ ?>
     <option value="<?php echo $row["proType_Id"] ?>"><?php echo $row["TypeName"] ?></option>
     <?php } ?>

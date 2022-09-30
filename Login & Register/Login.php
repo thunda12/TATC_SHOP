@@ -20,7 +20,7 @@
             $result = mysqli_query($conn,$query);
             $row = mysqli_fetch_assoc($result);
             if($check = mysqli_num_rows($result) != 0){
-            $_SESSION['username'] = $row["username"];
+            $_SESSION['username'] = $row["Email"];
             $_SESSION['cus_id'] = $row["cus_Id"];
             //echo "Hums";
             header("location: ../index.php");
@@ -98,7 +98,7 @@
             <div class="row">
                   <div class="col-sm-6">
                     <p class="mb-0">Don't have an account? 
-                      <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
+                      <a href="cus_register.php" class="text-white-50 fw-bold">Sign Up</a>
                     </p>
                   </div>
                   <div class="col-sm-6">

@@ -30,13 +30,8 @@
 <div class="container ">
     <h1>Hello Welcome : <span class="text-primary"><?php echo $_SESSION['username'] ?></span></h1>
     <form action="cus_profile_edit.php?ID_cus=<?php echo $row['cus_Id']?>" method="POST">
-        
         <div class="mb-3 ">
-            <label for="exampleInputEmail1" class="form-label">ชื่อผู้ใช้ <span style="color: gray; font-size:12px;">*//ใส่ตัวอักษรไม่เกิน 50 ตัวอักษร//*</span></label>
-            <input name="username" type="text" class="form-control" value="<?php echo $row['username']?>">
-        </div>
-        <div class="mb-3 ">
-            <label for="exampleInputEmail1" class="form-label">บัตรประชาชน <span style="color: gray; font-size:12px;">*//ใส่ตัวอักษรไม่เกิน 50 ตัวอักษร//*</span></label>
+            <label for="exampleInputEmail1" class="form-label">บัตรประชาชน <span style="color: gray; font-size:12px;">*//ใส่ตัวอักษรไม่เกิน 13 ตัวอักษร//*</span></label>
             <input name="card" type="text" class="form-control" value="<?php echo $row['cusIdCard']?>">
         </div>
         <div class="input-group">

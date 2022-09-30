@@ -9,10 +9,10 @@
         $tel = $_POST['tel'];
         $email = $_POST['email'];
         $address = $_POST['address'];
-        $username = $_POST['username'];
         if(isset($_POST['pass1'])){
-            $pass1 = $_POST['pass1'];
-            $pass2 = $_POST['pass2'];
+            $pass1 = isset($_POST['pass1'])?$_POST['pass1']:99;
+            $pass2 = isset($_POST['pass2'])?$_POST['pass2']:11;
+            echo $pass1;
             if($pass1 == $pass2){
                 $lastPass = md5($pass2);    
             }else{

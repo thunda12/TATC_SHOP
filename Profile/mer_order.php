@@ -3,7 +3,10 @@
     $mer_id = $_SESSION['mer_id'];
         $sql = "SELECT * FROM sale AS s INNER JOIN customer AS c 
         ON s.cus_Id = c.cus_Id INNER JOIN sale_detail AS sd ON s.sale_Id = sd.sale_Id 
-        INNER JOIN product AS p ON sd.pro_Id = p.pro_Id WHERE p.mer_Id = $mer_id" ;
+        INNER JOIN product AS p ON sd.pro_Id = p.pro_Id INNER JOIN sale_status AS ss 
+        ON s.saleStatus_Id = ss.saleStatus_Id WHERE p.mer_Id = $mer_id
+        GROUP BY s.sale_Id
+        ORDER BY s.sale_Id ASC" ;
     $result = $conn->query($sql);
     $count = $result->num_rows;
     
@@ -30,6 +33,7 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">ชื่อ</th>
+      <th scope="col">เบอร์โทร</th>
       <th scope="col">วันที่</th>
     </tr>
   </thead>
@@ -38,14 +42,16 @@
     <tr>
       <th scope="row"><?php echo $row['sale_Id'] ?></th>
       <td><?php echo $row['cusFirstName']." ".$row['cusLastName'] ?></td>
+      <td><?php echo $row['phoneNumber'] ?></td>
       <td><?php echo $row['saleDate'] ?></td>
+
     </tr>
   </tbody>
   <tfoot>
   <tr>
         <th scope="row"> </th>
-        <td colspan="1">รวม</td>
-        <td><?php echo $row['totalPrice'] ?></td>
+        <td colspan="2"><h5>รวม</h5></td>
+        <td><h5><?php echo $row['totalPrice'] ?></h5></td>
     </tr>
   </tfoot>
   </div>

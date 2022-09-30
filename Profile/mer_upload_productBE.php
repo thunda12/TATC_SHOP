@@ -6,8 +6,8 @@ $date=date("H:i:s");
 //ทำตัวแปรสำหรับเปลี่ยนเส้นทางของรูปภาพ
 $dir = "../pro_img/";
 //variable for image name
-$img_name = $_SESSION['mer_id'] . $_FILES["img-name"]["name"] . $date;
-$FilePart = $dir .$_SESSION['mer_id']. $_FILES["img-name"]["name"];
+$img_name = $_SESSION['mer_id'].$_FILES["img-name"]["name"] ;
+$FilePart = $dir .$_SESSION['mer_id'].$_FILES["img-name"]["name"] ;
 
     //insert product to DB
     if(isset($_REQUEST['submit'])){

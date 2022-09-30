@@ -13,6 +13,18 @@
       $qty=0;
     }
 ?>
+    <style>
+        #navbarCollapse{
+            position: relative;
+        }
+        #logo{
+            float: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
     <!-- Navbar Start -->
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
         <!-- <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
@@ -39,7 +51,7 @@
                 <div class="navbar-nav me-auto p-4 p-lg-0">
                     <?php if(!isset($_SESSION['mer_id'])){?>
                         <a href="index.php?select=cart" class="m-3">
-                            <img src="img/cart.png" height="45">
+                        <img src="img/cart01.png" height="45">
                             <span class="text-warning"><?php echo $qty?></span>
                         </a>
                     <?php }?>
@@ -60,8 +72,8 @@
                     <a href="component/contact.php" class="nav-item nav-link">Contact</a> -->
                 </div>
                 
-                <div class="navbar-nav me-auto p-4 p-lg-0">
-                    <a href="index.php" class="navbar-brand ms-4 ms-lg-0" style="text-align:center ;">
+                <div class="navbar-nav p-4 p-lg-0" id="logo" >
+                    <a href="index.php" class="navbar-brand ms-4 ms-lg-0" >
                         <h1 class="fw-bold text-primary m-0" >TATC<span class="text-white">&Market</span></h1>
                     </a>
                 </div>

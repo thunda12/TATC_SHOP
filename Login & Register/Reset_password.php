@@ -37,11 +37,11 @@ background: linear-gradient(121deg, rgba(131,214,255,1) 26%, rgba(255,115,0,1) 1
               <p class="text-white-50 mb-5">กรุณาใส่ รหัสผ่านใหม่ </p>
             <form action="sendEmail.php" method="POST">
               <div class="form-outline form-white mb-4">
-                <input type="text" name="pass1" class="form-control form-control-lg" require/>
+                <input type="password" name="pass1" class="form-control form-control-lg" require/>
                 <label class="form-label" for="typeEmailX" >รหัสผ่านใหม่</label>
               </div>
               <div class="form-outline form-white mb-4">
-                <input type="text" name="pass2" class="form-control form-control-lg" require/>
+                <input type="password" name="pass2" class="form-control form-control-lg" require/>
                 <label class="form-label" for="typeEmailX" >ใส่รหัสผ่านใหม่อีกครั้ง</label>
               </div>
               <button class="btn btn-outline-light btn-lg px-5" type="submit" name="submit">Reset</button>

@@ -25,6 +25,15 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
+    .card-text{
+        text-align: end;
+        white-space: nowrap; 
+        width: 100px;
+        line-height: 1em;
+        height: 1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 </style>
 
 <div class="row">
